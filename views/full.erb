@@ -1,0 +1,8 @@
+<h2>Here is your entire dictionary</h2>
+
+<% @dictionary.each do |entry| %>
+  <h4><%= entry.word %></h4>
+  <% entry.definition.each do |definition| %>
+    <p><%= definition %></p>
+  <% end %>
+<% end %>

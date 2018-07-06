@@ -12,7 +12,6 @@ describe('word and definition input', {:type => :feature}) do
     expect(page).to have_content('puppy')
   end
 end
-
 describe('navigation', {:type => :feature}) do
   it('user click on word on list and displays new page with definition') do
     visit('/')

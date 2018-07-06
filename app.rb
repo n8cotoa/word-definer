@@ -35,3 +35,8 @@ post('/entry/:id') do
   @entry.definition.push(definition)
   erb(:entry)
 end
+
+get('/full') do
+  @dictionary = Word.all()
+  erb(:full)
+end
