@@ -1,7 +1,7 @@
 <h2>Here is your dictionary</h2>
 
 <% @dictionary.each do |entry| %>
-  <p><%= entry.word %></p>
+  <h4><a href="/entry/<%= entry.id %>"><%= entry.word %></a></h4>
 <% end %>
 
 <h4>Add an entry to the list:</h4>

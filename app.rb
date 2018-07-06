@@ -1,4 +1,4 @@
-requrie 'sinatra'
+require 'sinatra'
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/word')
@@ -15,4 +15,9 @@ post('/') do
   entry.save()
   @dictionary = Word.all()
   erb(:dictionary)
+end
+
+get('/entry/:id') do
+  @entry = Word.find((params[:id]).to_i)
+  erb(:entry)
 end

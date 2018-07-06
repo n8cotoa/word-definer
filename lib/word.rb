@@ -1,11 +1,11 @@
 class Word
   @@dictionary = []
-
-  attr_reader(:word, :definition)
+  attr_reader(:id)
+  attr_accessor(:word, :definition)
 
   def initialize(word, definition)
     @word = word
-    @id = @@dictionary.length + 1
+    @id = (@@dictionary.length + 1).to_i
     @definition = definition
   end
 
@@ -19,6 +19,10 @@ class Word
 
   def self.clear()
     @@dictionary = []
+  end
+
+  def self.find(id)
+  @@dictionary[id - 1]
   end
 
 end
