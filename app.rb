@@ -34,7 +34,6 @@ post('/entry/:id') do
   definition=params['new-definition']
   @entry = Word.find((params[:id]).to_i)
   @entry.definition.push(definition)
-  @entry.image = params['new-image']
   erb(:entry)
 end
 
