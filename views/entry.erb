@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-md-10">
     <h1><%= @entry.word %></h1>
-    <% @entry.definition.each do |definition| %>
-      <p><%= definition %></p>
-    <% end %>
+    <ul>
+      <% @entry.definition.each do |definition| %>
+        <li><%= definition %></li>
+      <% end %>
+    </ul>
   </div>
   <div class="col-md-2">
     <img class="entry-img" src="<%= @entry.image %>">
