@@ -1,3 +1,48 @@
 .jumbotron {
   text-align: center;
+  background-color: #687D9B;
+  color: #FFFDF8;
+}
+
+body {
+  background-image: url(../img/school.png);
+}
+
+.btn-info {
+  background-color: #7067CF;
+  border-color: #7067CF;
+}
+
+.btn-info:hover {
+  background-color: #A49EE0;
+  border-color: #A49EE0;
+}
+
+.btn-warning {
+  background-color: #C94277;
+  border-color: #C94277;
+}
+.btn-warning:hover {
+  background-color: #DC86A8;
+  border-color: #DC86A8;
+}
+
+.btn-success {
+  background-color: #68AC71;
+  border-color: #68AC71;
+}
+.btn-success:hover {
+  background-color: #8AD593;
+  border-color: #8AD593;
+}
+
+.btn-danger {
+  margin-top: 10px;
+  background-color: #ED6A5A;
+  border-color: #ED6A5A;
+}
+.btn-danger:hover {
+  margin-top: 10px;
+  background-color: #F3A096;
+  border-color: #F3A096;
 }
