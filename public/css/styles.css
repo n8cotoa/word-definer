@@ -4,6 +4,15 @@
   color: #FFFDF8;
 }
 
+.entry-img {
+  margin-top: 15px;
+  width: 85%;
+}
+
+.entry-form {
+  margin-top: 40px;
+}
+
 body {
   background-image: url(../img/school.png);
 }
@@ -37,12 +46,11 @@ body {
 }
 
 .btn-danger {
-  margin-top: 10px;
+  margin-left: 5px;
   background-color: #ED6A5A;
   border-color: #ED6A5A;
 }
 .btn-danger:hover {
-  margin-top: 10px;
   background-color: #F3A096;
   border-color: #F3A096;
 }

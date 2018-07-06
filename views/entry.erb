@@ -1,17 +1,23 @@
-<h1><%= @entry.word %></h1>
-<% @entry.definition.each do |definition| %>
-  <p><%= definition %></p>
-<% end %>
-
-
-
-<h3>Add another Definition:</h3>
-<form action="/entry/:id" method="post">
-  <div class="form-group">
-    <label for="new-definition">Definition</label>
-    <input id="new-definition" name="new-definition" class='form-control' type='text'>
+<div class="row">
+  <div class="col-md-10">
+    <h1><%= @entry.word %></h1>
+    <% @entry.definition.each do |definition| %>
+      <p><%= definition %></p>
+    <% end %>
   </div>
-  <button type="submit" class="btn btn-success">Add!</button>
-</form>
+  <div class="col-md-2">
+    <img class="entry-img" src="<%= @entry.image %>">
+  </div>
+</div>
 
-<a href="/" class="btn btn-danger">Back To Home</a>
+<div class="entry-form">
+  <h3>Add another Definition:</h3>
+  <form action="/entry/<%= @entry.id %>" method="post">
+    <div class="form-group">
+      <label for="new-definition">Definition</label>
+      <input id="new-definition" name="new-definition" class='form-control' type='text'>
+    </div>
+    <button type="submit" class="btn btn-success">Add!</button>
+    <a href="/" class="btn btn-danger">Back To Home</a>
+  </form>
+</div>

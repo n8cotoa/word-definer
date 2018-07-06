@@ -10,9 +10,6 @@
       <h4><a href="/entry/<%= entry.id %>"><%= entry.word %></a></h4>
     <% end %>
 
-
-
-    <!-- <a href='/random' class='btn btn-danger'>Random!</a> -->
   </div>
   <div class ='col-md-6'>
     <h4>Add an entry to your dictionary:</h4>
@@ -25,6 +22,10 @@
       <div class="form-group">
         <label for="definition">Definition</label>
         <input id="definition" name="definition" class='form-control' type='text'>
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input id="image" name="image" class='form-control' type='text'>
       </div>
       <button type="submit" class="btn btn-success">Go!</button>
     </form>
