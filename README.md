@@ -6,7 +6,11 @@
 
 ## Description
 
-A program that will let the user input their own words and definitions to build a dictionary.
+A program designed to help kids learn about language by building a dictionary with their own words and definitions.
+
+## Deployment
+
+https://shielded-escarpment-19830.herokuapp.com/
 
 ## Setup/Contribution Requirements
 
