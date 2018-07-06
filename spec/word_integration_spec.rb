@@ -23,7 +23,6 @@ describe('image link input', {:type => :feature}) do
     expect(page).to have_xpath("//img[@src='https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/06/shutterstock_225746563-796x531.jpg']")
   end
 end
-
 describe('navigation', {:type => :feature}) do
   it('user click on word on list and displays new page with definition') do
     visit('/')
