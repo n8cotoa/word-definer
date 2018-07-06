@@ -1,23 +1,32 @@
-<h2>Here is your dictionary</h2>
+<div class="nav">
+  <a href="/sort" class='btn btn-info'>Sort</a>
+  <a href="/full" class='btn btn-warning'>Full Dictionary</a>
+</div>
+<div class='row'>
+  <div class = 'col-md-6'>
+    <h2>Here is your dictionary</h2>
 
-<% @dictionary.each do |entry| %>
-  <h4><a href="/entry/<%= entry.id %>"><%= entry.word %></a></h4>
-<% end %>
+    <% @dictionary.each do |entry| %>
+      <h4><a href="/entry/<%= entry.id %>"><%= entry.word %></a></h4>
+    <% end %>
 
-<a href="/sort" class='btn btn-info'>Sort</a>
 
-<a href="/full" class='btn btn-warning'>Full Dictionary</a>
 
-<h4>Add an entry to the list:</h4>
-
-<form action="/" method="post">
-  <div class="form-group">
-    <label for="word">Word</label>
-    <input id="word" name="word" class="form-control" type="text">
+    <!-- <a href='/random' class='btn btn-danger'>Random!</a> -->
   </div>
-  <div class="form-group">
-    <label for="definition">Definition</label>
-    <input id="definition" name="definition" class='form-control' type='text'>
-  </div>
-  <button type="submit" class="btn">Go!</button>
-</form>
+  <div class ='col-md-6'>
+    <h4>Add an entry to your dictionary:</h4>
+
+    <form action="/" method="post" id="main-form">
+      <div class="form-group">
+        <label for="word">Word</label>
+        <input id="word" name="word" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="definition">Definition</label>
+        <input id="definition" name="definition" class='form-control' type='text'>
+      </div>
+      <button type="submit" class="btn btn-success">Go!</button>
+    </form>
+  <div>
+</div>

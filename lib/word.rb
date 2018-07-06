@@ -6,7 +6,7 @@ class Word
   def initialize(word, definition)
     @word = word
     @id = (@@dictionary.length + 1).to_i
-    @definition = [] 
+    @definition = []
     @definition.push(definition)
   end
 
@@ -26,4 +26,10 @@ class Word
   @@dictionary[id - 1]
   end
 
+  def self.find_random()
+    num = @@dictionary.length
+    random = rand(num) + 1
+    binding.pry
+    random
+  end
 end
