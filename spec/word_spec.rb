@@ -1,8 +1,8 @@
 require 'rspec'
-require 'word_definition_creator'
+require 'word'
 require 'pry'
 
-describe(Word) do
+describe('Word') do
   before() do
     Word.clear()
   end
