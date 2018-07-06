@@ -10,8 +10,8 @@ get('/') do
 end
 
 get('/sort') do
+  Word.sort()
   @dictionary = Word.all()
-  @dictionary = @dictionary.sort_by{ |entry| entry.word }
   erb(:dictionary)
 end
 
@@ -40,9 +40,3 @@ get('/full') do
   @dictionary = Word.all()
   erb(:full)
 end
-
-# get('/random') do
-#   id = Word.find_random()
-#   @entry = Word.find((params[:id]).to_i)
-#   erb(:entry)
-# end

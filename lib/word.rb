@@ -1,6 +1,6 @@
 class Word
   @@dictionary = []
-  attr_reader(:id)
+  attr_reader(:id, :dictionary)
   attr_accessor(:word, :definition)
 
   def initialize(word, definition)
@@ -12,6 +12,10 @@ class Word
 
   def self.all()
     @@dictionary
+  end
+
+  def self.sort()
+    @@dictionary = @@dictionary.sort_by{ |entry| entry.word }
   end
 
   def save

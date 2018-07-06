@@ -35,4 +35,14 @@ describe('Word') do
       expect(Word.find(2)).to(eq(entry2))
     end
   end
+  describe(".sort") do
+    it("sort entries by alphabetical") do
+      entry = Word.new("tacos", 'yummy mexican food')
+      entry.save()
+      entry2 = Word.new("pizza", "my favorite lunch food")
+      entry2.save()
+      Word.sort()
+      expect(Word.all()).to(eq([entry2, entry]))
+    end
+  end
 end
