@@ -22,6 +22,8 @@ https://shielded-escarpment-19830.herokuapp.com/
 ## Technologies Used
 
 * Ruby 2.2.2
+* Sinatra 2.0.3
+* Heroku
 
 ## License
 
