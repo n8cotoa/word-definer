@@ -6,7 +6,8 @@ class Word
   def initialize(word, definition)
     @word = word
     @id = (@@dictionary.length + 1).to_i
-    @definition = definition
+    @definition = [] 
+    @definition.push(definition)
   end
 
   def self.all()

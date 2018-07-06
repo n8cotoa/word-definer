@@ -21,3 +21,10 @@ get('/entry/:id') do
   @entry = Word.find((params[:id]).to_i)
   erb(:entry)
 end
+
+post('/entry/:id') do
+  definition=params['definition']
+  @entry = Word.find((params[:id]).to_i)
+  @entry.definition.push(definition)
+  erb(:entry)
+end

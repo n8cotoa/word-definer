@@ -1,2 +1,15 @@
 <h1><%= @entry.word %></h1>
-<p><%= @entry.definition %></p>
+<% @entry.definition.each do |definition| %>
+  <p><%= definition %></p>
+<% end %>
+
+
+
+<h3>Add another Definition:</h3>
+<form action="/entry/:id" method="post">
+  <div class="form-group">
+    <label for="definition">Definition</label>
+    <input id="definition" name="definition" class='form-control' type='text'>
+  </div>
+  <button type="submit" class="btn btn-success">Go!</button>
+</form>

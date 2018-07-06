@@ -10,7 +10,7 @@ describe('Word') do
     it('take word and definition and save as instance variable') do
       entry = Word.new('Puppy', 'An infant dog')
       expect(entry.word).to(eq('Puppy'))
-      expect(entry.definition).to(eq('An infant dog'))
+      expect(entry.definition).to(eq(['An infant dog']))
     end
   end
   describe(".all") do
