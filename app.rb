@@ -12,6 +12,13 @@ end
 get('/sort') do
   Word.sort()
   @dictionary = Word.all()
+  redirect back
+  erb(:dictionary)
+end
+
+get('/clear') do
+  Word.clear()
+  redirect back
   erb(:dictionary)
 end
 

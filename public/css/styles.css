@@ -28,6 +28,7 @@ body {
 }
 
 .btn-warning {
+  margin-left: 5px;
   background-color: #C94277;
   border-color: #C94277;
 }
