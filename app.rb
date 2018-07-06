@@ -30,7 +30,7 @@ get('/entry/:id') do
 end
 
 post('/entry/:id') do
-  definition=params['definition']
+  definition=params['new-definition']
   @entry = Word.find((params[:id]).to_i)
   @entry.definition.push(definition)
   erb(:entry)

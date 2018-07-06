@@ -20,3 +20,12 @@ describe('navigation', {:type => :feature}) do
     expect(page).to have_content('baby dog')
   end
 end
+describe('add another definition', {:type => :feature}) do
+  it('process user input on word page and add new definition') do
+    visit('/')
+    click_link('puppy')
+    fill_in('new-definition', :with => 'a smol doggo')
+    click_button('Add!')
+    expect(page).to have_content('a smol doggo')
+  end
+end
