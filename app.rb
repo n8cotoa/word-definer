@@ -2,9 +2,16 @@ require 'sinatra'
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/word')
+require 'pry'
 
 get('/') do
   @dictionary = Word.all()
+  erb(:dictionary)
+end
+
+get('/sort') do
+  @dictionary = Word.all()
+  @dictionary = @dictionary.sort_by{ |entry| entry.word }
   erb(:dictionary)
 end
 
