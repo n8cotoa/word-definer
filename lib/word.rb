@@ -30,11 +30,4 @@ class Word
   def self.find(id)
   @@dictionary[id - 1]
   end
-
-  def self.find_random()
-    num = @@dictionary.length
-    random = rand(num) + 1
-    binding.pry
-    random
-  end
 end
